@@ -37,11 +37,11 @@ def findWayOut( maze , start, finish, curNumb, red, green):
         print (green[i].x, green[i].y)
     print("----")
     if (len(temp)):
-        maze[start.y][start.x] = str(curNumb)
+        maze[start.y][start.x] = str(format(curNumb, 'x'))
         curNumb+=1
 
     if (start.x == finish.x and start.y== finish.y):
-        maze[start.y][start.x] = str(curNumb)
+        maze[start.y][start.x] = str(format(curNumb, 'x'))
         return True
     findWayOut ( maze , green.pop(0), finish, curNumb, red, green)
 
